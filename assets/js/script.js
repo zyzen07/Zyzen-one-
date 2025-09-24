@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const mentorsData = [
         // CORRECTED PATH: added 'company-logos/'
-        { img:'assets/img/company-logos/selvaimage.jpg', name: 'Mr. Selva Vishnu', field: ' Full Stack Engineer', experience:5, company: 'Innovate Solutions' },
+        { img:'assets/img/company-logos/selva1.jpg', name: 'Mr. Selva Vishnu', field: ' Full Stack Engineer', experience:5, company: 'Innovate Solutions' },
         { img:'assets/img/company-logos/santhosh1.jpg', name: 'Mr. Santhosh Kumar', field: 'Software Engineering', experience: 8, company: 'TechCorp' },
         { img:'assets/img/company-logos/sudhar.jpg', name: 'Mr. Sudharsan', field: 'UX Design', experience: 6, company: 'Fitngrow' },
         { img:'assets/img/company-logos/ranjith1.jpg', name: 'Mr. Ranjith', field: 'AI/ML engineer', experience: 3, company: 'cor tech' },

@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // CORRECTED PATH: added 'company-logos/'
         { img:'assets/img/company-logos/selva1.jpg', name: 'Mr. Selva Vishnu', field: ' Full Stack Engineer', experience:5, company: 'Innovate Solutions' },
         { img:'assets/img/company-logos/santhosh1.jpg', name: 'Mr. Santhosh Kumar', field: 'Software Engineering', experience: 8, company: 'TechCorp' },
-        { img:'assets/img/company-logos/sudhar1.jpg', name: 'Mr. Sudharsan', field: 'UX Design', experience: 6, company: 'Fitngrow' },
+        { img:'assets/img/company-logos/sudhar2.jpg', name: 'Mr. Sudharsan', field: 'UX Design', experience: 6, company: 'Fitngrow' },
         { img:'assets/img/company-logos/ranjith1.jpg', name: 'Mr. Ranjith', field: 'AI/ML engineer', experience: 3, company: 'cor tech' },
         { img:'assets/img/company-logos/sivakumar.jpg', name: 'Dr. Sneha Patil', field: 'Financial Analysis', experience: 10, company: 'Apex Finance' },
     ];

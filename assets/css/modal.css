@@ -70,3 +70,56 @@
 .modal-form button:hover {
     background-color: #218838;
 }
+
+.social-login-separator {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 0.9rem;
+    color: #777;
+    position: relative;
+}
+
+.social-login-separator::before {
+    content: '';
+    display: block;
+    height: 1px;
+    background-color: #ddd;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.social-login-separator span {
+    background-color: #fff;
+    padding: 0 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.google-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #555;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.google-btn:hover {
+    background-color: #f4f4f4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.google-btn i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}

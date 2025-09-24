@@ -14,26 +14,25 @@
     <header class="main-header">
         <div class="logo-container">
             <img src="assets/img/logo.png" alt="Zyzen Logo" class="logo">
-            <h1 class="app-name">Zyzen</h1>
         </div>
         <nav class="main-nav">
             <ul>
-                <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
                 <li><a href="#hero-section" class="active"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href="#courses-section"><i class="fas fa-book-open"></i> Courses</a></li>
+                <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
                 <li><a href="internships.html"><i class="fas fa-briefcase"></i> Internships</a></li>
                 <li><a href="profile.html"><i class="fas fa-user-circle"></i> Profile</a></li>
             </ul>
         </nav>
-        <button class="header-auth" id="loginBtn">Login / Sign Up</button>
+        <button class="header-auth-icon" id="loginBtn"><i class="fas fa-user-circle"></i></button>
         <div class="hamburger-menu" id="hamburgerBtn">&#9776;</div>
     </header>
     
     <div class="hamburger-menu-content" id="navOverlay">
         <span class="close-hamburger">&times;</span>
-        <a href="dashboard.html">Dashboard</a>
         <a href="#hero-section">Home</a>
         <a href="#courses-section">Courses</a>
+        <a href="dashboard.html">Dashboard</a>
         <a href="internships.html">Internships</a>
         <a href="profile.html">Profile</a>
     </div>
@@ -46,9 +45,11 @@
         </section>
 
         <section class="companies-section">
-            <h2 class="section-title">Our Industry Mentors are from</h2>
-            <div class="company-logo-container" id="companyLogoCarousel">
-                </div>
+            <h2 class="section-title">Our Mentors</h2>
+            <div class="company-logo-container">
+                <div class="logo-carousel-track" id="companyLogoCarousel">
+                    </div>
+            </div>
         </section>
 
         <section class="programs-section">
@@ -60,6 +61,12 @@
         <section class="courses-section" id="courses-section">
             <h2 class="section-title">Popular Courses & Workshops</h2>
             <div class="courses-grid" id="coursesGrid">
+                </div>
+        </section>
+
+        <section class="mentors-section">
+            <h2 class="section-title">Meet Your Mentors</h2>
+            <div class="mentors-carousel-track" id="mentorsGrid">
                 </div>
         </section>
     </main>
@@ -81,6 +88,8 @@
         <div class="modal-content">
             <span class="close-btn">&times;</span>
             <h2>Login / Sign Up</h2>
+            <a href="#" class="google-btn"><i class="fab fa-google"></i> Continue with Google</a>
+            <div class="social-login-separator"><span>or</span></div>
             <form class="modal-form">
                 <input type="text" placeholder="Username or Email" required>
                 <input type="password" placeholder="Password" required>

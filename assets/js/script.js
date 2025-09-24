@@ -24,6 +24,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- Hamburger Menu Functionality ---
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navOverlay = document.getElementById('navOverlay');
+    const closeHamburgerBtn = document.querySelector('.close-hamburger');
+
+    if (hamburgerBtn && navOverlay && closeHamburgerBtn) {
+        hamburgerBtn.addEventListener('click', () => {
+            navOverlay.classList.add('open');
+        });
+
+        closeHamburgerBtn.addEventListener('click', () => {
+            navOverlay.classList.remove('open');
+        });
+        
+        navOverlay.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navOverlay.classList.remove('open');
+            });
+        });
+    }
+
     // --- Dynamic Content Data ---
     const programsData = [
         { icon: 'fas fa-chalkboard-teacher', title: 'Curated Courses', description: 'Structured learning paths for in-demand skills.' },
@@ -40,7 +61,17 @@ document.addEventListener('DOMContentLoaded', () => {
         { img: 'https://via.placeholder.com/280x150/6f42c1/ffffff?text=Cloud+Computing', title: 'Cloud Computing with AWS', description: 'Explore AWS services for scalable and robust cloud solutions.', tags: ['AWS', 'Cloud', 'DevOps'] },
     ];
 
+    const mentorsData = [
+        { img: 'assets/img/mentor-placeholder.jpg', name: 'Dr. Priya Sharma', field: 'Data Science', experience: 12, company: 'Innovate Solutions' },
+        { img: 'assets/img/mentor-placeholder.jpg', name: 'Mr. Rohan Mehta', field: 'Software Engineering', experience: 8, company: 'TechCorp' },
+        { img: 'assets/img/mentor-placeholder.jpg', name: 'Ms. Ananya Singh', field: 'UX Design', experience: 6, company: 'Creative Labs' },
+        { img: 'assets/img/mentor-placeholder.jpg', name: 'Mr. Vivek Jain', field: 'Cloud Computing', experience: 15, company: 'Global Cloud Services' },
+        { img: 'assets/img/mentor-placeholder.jpg', name: 'Dr. Sneha Patil', field: 'Financial Analysis', experience: 10, company: 'Apex Finance' },
+    ];
+    const mentorsForCarousel = [...mentorsData, ...mentorsData];
+
     const companyLogos = ['cisco', 'flipkart', 'amazon', 'juniper', 'tcs', 'wipro', 'infosis', 'zoho', 'dell', 'jio', 'nasdaq'];
+    const logosForCarousel = [...companyLogos, ...companyLogos]; // Duplicate the array for a seamless loop
 
     const internships = [
         { title: 'Full Stack Developer Intern', company: 'Innovate Solutions', location: 'Bangalore', duration: '6 months', stipend: '₹15,000/month', skills: ['React', 'Node.js', 'MongoDB', 'JavaScript'], industry: 'IT' },
@@ -85,6 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const programsGrid = document.getElementById('programsGrid');
         const coursesGrid = document.getElementById('coursesGrid');
         const companyLogoCarousel = document.getElementById('companyLogoCarousel');
+        const mentorsGrid = document.getElementById('mentorsGrid');
         
         if (programsGrid && coursesGrid && companyLogoCarousel) {
             programsData.forEach(program => {
@@ -109,19 +141,37 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="course-tags">
                             ${course.tags.map(tag => `<span class="course-tag">${tag}</span>`).join('')}
                         </div>
-                        <a href="#" class="enroll-button">Enroll Now</a>
+                        <div class="course-buttons">
+                            <a href="#" class="enroll-button">Enroll Now</a>
+                            <a href="#" class="brochure-button">Add Brochure</a>
+                        </div>
                     </div>
                 `;
                 coursesGrid.appendChild(card);
             });
             
-            companyLogos.forEach(logoName => {
+            logosForCarousel.forEach(logoName => {
                 const img = document.createElement('img');
                 img.src = `assets/img/company-logos/${logoName}.png`;
                 img.alt = `${logoName} logo`;
                 img.className = 'company-logo';
                 companyLogoCarousel.appendChild(img);
             });
+
+            if (mentorsGrid) {
+                mentorsForCarousel.forEach(mentor => {
+                    const card = document.createElement('div');
+                    card.className = 'mentor-card card';
+                    card.innerHTML = `
+                        <img src="${mentor.img}" alt="${mentor.name}" class="mentor-img">
+                        <h4>${mentor.name}</h4>
+                        <p class="mentor-field">${mentor.field}</p>
+                        <p class="mentor-experience"><strong>Experience:</strong> ${mentor.experience} Years</p>
+                        <p class="mentor-company"><strong>Company:</strong> ${mentor.company}</p>
+                    `;
+                    mentorsGrid.appendChild(card);
+                });
+            }
         }
     }
 
@@ -210,19 +260,19 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             logbookEntries.forEach(entry => {
-                const entryItem = document.createElement('div');
-                entryItem.className = 'logbook-item';
-                entryItem.innerHTML = `
-                    <h4>${entry.title}</h4>
-                    <p>${entry.description}</p>
-                `;
-                if (logbookEntriesContainer) {
-                    logbookEntriesContainer.appendChild(entryItem);
-                }
-            });
+                    const entryItem = document.createElement('div');
+                    entryItem.className = 'logbook-item';
+                    entryItem.innerHTML = `
+                        <h4>${entry.title}</h4>
+                        <p>${entry.description}</p>
+                    `;
+                    if (logbookEntriesContainer) {
+                        logbookEntriesContainer.appendChild(entryItem);
+                    }
+                });
+            }
         }
-    }
-
+    
     // Profile Page rendering
     function renderProfilePage() {
         const profileHeader = document.getElementById('profileHeader');

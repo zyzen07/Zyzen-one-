@@ -68,6 +68,21 @@
     background-color: #0056b3;
 }
 
+/* User Icon for Login/Sign Up */
+.header-auth-icon {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.3s;
+}
+
+.header-auth-icon:hover {
+    color: #0056b3;
+}
+
 /* Hamburger Menu for Mobile */
 .hamburger-menu {
     display: none;
@@ -84,6 +99,10 @@
 @media (max-width: 768px) {
     .main-nav, .header-auth {
         display: none;
+    }
+    
+    .header-auth-icon {
+        display: block; /* Show the icon on mobile */
     }
 
     .hamburger-menu {

@@ -54,19 +54,20 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     const coursesData = [
-        { img: 'https://via.placeholder.com/280x150/007bff/ffffff?text=Web+Dev', title: 'Full Stack Web Development', description: 'Master MERN stack development for modern web applications.', tags: ['React', 'Node.js', 'MongoDB'] },
-        { img: 'https://via.placeholder.com/280x150/28a745/ffffff?text=Data+Science', title: 'Introduction to Data Science', description: 'Learn Python, Pandas, and basic machine learning algorithms.', tags: ['Python', 'Pandas', 'ML'] },
-        { img: 'https://via.placeholder.com/280x150/ffc107/ffffff?text=Digital+Marketing', title: 'Digital Marketing Fundamentals', description: 'Understand SEO, SEM, Social Media, and Content Marketing.', tags: ['SEO', 'Social Media', 'Marketing'] },
-        { img: 'https://via.placeholder.com/280x150/dc3545/ffffff?text=UI/UX', title: 'UI/UX Design Basics', description: 'Create user-centric designs with Figma and Sketch.', tags: ['Figma', 'UI Design', 'UX'] },
-        { img: 'https://via.placeholder.com/280x150/6f42c1/ffffff?text=Cloud+Computing', title: 'Cloud Computing with AWS', description: 'Explore AWS services for scalable and robust cloud solutions.', tags: ['AWS', 'Cloud', 'DevOps'] },
+        { img: 'assets/img/company-logos/fullstack1.png', title: 'Full Stack Web Development', description: 'Master MERN stack development for modern web applications.', tags: ['React', 'Node.js', 'MongoDB'] },
+        { img: 'assets/img/company-logos/datascience.png', title: 'Introduction to Data Science', description: 'Learn Python, Pandas, and basic machine learning algorithms.', tags: ['Python', 'Pandas', 'ML'] },
+        { img: 'assets/img/company-logos/digital.png', title: 'Digital Marketing Fundamentals', description: 'Understand SEO, SEM, Social Media, and Content Marketing.', tags: ['SEO', 'Social Media', 'Marketing'] },
+        { img: 'assets/img/company-logos/ui.png', title: 'UI/UX Design Basics', description: 'Create user-centric designs with Figma and Sketch.', tags: ['Figma', 'UI Design', 'UX'] },
+        { img: 'assets/img/company-logos/cloud.png', title: 'Cloud Computing with AWS', description: 'Explore AWS services for scalable and robust cloud solutions.', tags: ['AWS', 'Cloud', 'DevOps'] },
     ];
 
     const mentorsData = [
-        { img: 'assets/img/mentor-placeholder.jpg', name: 'Dr. Priya Sharma', field: 'Data Science', experience: 12, company: 'Innovate Solutions' },
-        { img: 'assets/img/mentor-placeholder.jpg', name: 'Mr. Rohan Mehta', field: 'Software Engineering', experience: 8, company: 'TechCorp' },
-        { img: 'assets/img/mentor-placeholder.jpg', name: 'Ms. Ananya Singh', field: 'UX Design', experience: 6, company: 'Creative Labs' },
-        { img: 'assets/img/mentor-placeholder.jpg', name: 'Mr. Vivek Jain', field: 'Cloud Computing', experience: 15, company: 'Global Cloud Services' },
-        { img: 'assets/img/mentor-placeholder.jpg', name: 'Dr. Sneha Patil', field: 'Financial Analysis', experience: 10, company: 'Apex Finance' },
+        // CORRECTED PATH: added 'company-logos/'
+        { img:'assets/img/company-logos/selvaimage.jpg', name: 'Mr. Selva Vishnu', field: ' Full Stack Engineer', experience:5, company: 'Innovate Solutions' },
+        { img:'assets/img/company-logos/santhosh1.jpg', name: 'Mr. Santhosh Kumar', field: 'Software Engineering', experience: 8, company: 'TechCorp' },
+        { img:'assets/img/company-logos/sudhar.jpg', name: 'Mr. Sudharsan', field: 'UX Design', experience: 6, company: 'Fitngrow' },
+        { img:'assets/img/company-logos/ranjith1.jpg', name: 'Mr. Ranjith', field: 'AI/ML engineer', experience: 3, company: 'cor tech' },
+        { img:'assets/img/company-logos/sivakumar.jpg', name: 'Dr. Sneha Patil', field: 'Financial Analysis', experience: 10, company: 'Apex Finance' },
     ];
     const mentorsForCarousel = [...mentorsData, ...mentorsData];
 
@@ -143,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                         <div class="course-buttons">
                             <a href="#" class="enroll-button">Enroll Now</a>
-                            <a href="#" class="brochure-button">Add Brochure</a>
+                            <a href="#" class="brochure-button">View Brochure</a>
                         </div>
                     </div>
                 `;
